@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx ts-node index.ts",
+    "start": "npx ts-node src/index.ts",
     "lint": "eslint src/ --ext .ts",
     "lint:fix": "eslint src/ --ext .ts --fix",
     "compile": "tsc --noEmit",
@@ -20,8 +20,12 @@
     "url": "https://github.com/rickythedeveloper/web_auth_server/issues"
   },
   "homepage": "https://github.com/rickythedeveloper/web_auth_server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "@tsconfig/node14": "^1.0.1",
+    "@types/express": "^4.17.13",
     "@types/node": "^16.7.13",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.31.0",
