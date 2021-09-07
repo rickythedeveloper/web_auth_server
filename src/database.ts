@@ -66,7 +66,7 @@ export const loginIsSuccessful = async (username: string, password: string): Pro
 	try {
 		const getHashResult = await pool.query(`SELECT password_hash FROM ${USER_ACCOUNTS_TABLE} WHERE username = $1`, [username]);
 		if (getHashResult.rows.length > 1) throw new Error('There are more than one users with the same username');
-		if (getHashResult.rows.length < 0) return false;
+		if (getHashResult.rows.length == 0) return false;
 		const passwordHash = getHashResult.rows[0].password_hash;
 
 		try {
